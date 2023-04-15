@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ggrks.world</title>
+        <meta property="og:title" content="ggrks.world">
+        <meta name="description" content="自分で調べることはとても大切です。人に聞く前に自分で調べましょう。"/>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var currentUrl = window.location.href;
+
+            if (currentUrl.lastIndexOf('/') === currentUrl.length - 1) {
+                window.location.replace("https://google.com");
+            } else {
+                var subdirectoryText = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+                window.location.replace("https://www.google.com/search?q=" + subdirectoryText);
+            }
+        </script>
+    </body>
+</html>
