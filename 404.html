@@ -28,7 +28,7 @@
     <script>
         window.onload = function() {
             var url = new URL(window.location.href);
-            var textToSearch = decodeURIComponent(url.pathname.split('/').pop());
+            var textToSearch = decodeURIComponent(url.pathname.split('/').pop()); // パーセントエンコードをデコード
             var sanitizedQuery = encodeURIComponent(textToSearch);
             window.location.replace("https://www.google.com/search?q=" + sanitizedQuery);
         }
