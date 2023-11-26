@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>自分で調べることはとても大切なことです。人に聞く前に自分で調べましょう。</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0">
+    <script>
+        window.onload = function() {
+            var url = new URL(window.location.href);
+            var textToSearch = decodeURIComponent(url.pathname.split('/').pop()); // パーセントエンコードをデコード
+            var sanitizedQuery = encodeURIComponent(textToSearch);
+            window.location.replace("https://www.google.com/search?q=" + sanitizedQuery);
+        }
+    </script>
+</head>
+<body>
+    <h1>自分で調べることはとても大切です。人に聞く前に自分で調べましょう。</h1>
+</body>
+</html>
